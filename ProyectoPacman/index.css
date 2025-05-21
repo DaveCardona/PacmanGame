@@ -1,0 +1,75 @@
+body {
+    font-family:  arial, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+    gap: 2px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.wall {
+    background-color: #0033cc;
+    border: 2px solid #001a66;
+}
+
+.dot{
+    background-color: black;
+    position: relative;
+}
+
+.dot::after{
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+}
+
+/* EL PACMAN :V */
+.pacman {
+    background: yellow;
+    border-radius: 50%;
+}
+
+/* 
+
+EL PACMAN :V 
+.pacman {
+    background-image: url("/pac-man.gif");
+}
+
+*/
+
+/* FANTASMITA */
+
+.ghost {
+    border-radius: 50%;
+    position: relative;
+
+}
+
+.red {
+    background-color: red;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.green {
+    background-color: green;
+}

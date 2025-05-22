@@ -1,0 +1,98 @@
+body {
+    font-family:  arial, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+    gap: 2px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.wall {
+    background-color: #0033cc;
+    border: 2px solid #001a66;
+}
+
+.dot{
+    background-color: black;
+    position: relative;
+    z-index: 0;
+}
+
+.dot::after{
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Que Pacman y Fantasmas estén encima */
+.pacman, .ghost {
+    position: relative;
+    z-index: 2;
+}
+
+/* EL PACMAN :V */
+.pacman {
+    background-image: url("/img/pac-man.gif");
+    background-size: contain;
+    background-repeat:  no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    transform: rotate(0deg);
+   
+}
+
+.pacman-inner {
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/pac-man.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* FANTASMITA */
+
+.ghost {   
+    
+    position: relative;
+    z-index: 2;
+
+}
+
+.red {
+    background-image: url("/img/red.gif");
+    background-size: contain;
+    background-repeat:  no-repeat;
+}
+
+.pink {
+    background-image: url("/img/pinky.gif");
+    background-size: contain;
+    background-repeat:  no-repeat;
+}
+
+.green {
+    background-image: url("/img/yellow.gif");
+    background-size: contain;
+    background-repeat:  no-repeat;;
+}
